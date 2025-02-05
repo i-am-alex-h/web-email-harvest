@@ -1,0 +1,13 @@
+Examples of invalid email addresses
+
+dot-atom does not permit a leading dot:
+  .leadingDot@not.permitted.example (INVALID)
+
+dot-atom does not allow commas:
+  no,commas@not.allowed.example (INVALID)
+
+The double quote character is not valid in dot-atom:
+  not"valid@example.com (INVALID)
+
+The double quote charatcer cannot be escaped in dot-atom:
+  no\"escape@example.org (INVALID)

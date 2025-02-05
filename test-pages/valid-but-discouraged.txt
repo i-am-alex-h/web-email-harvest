@@ -1,0 +1,11 @@
+Examples of valid email addresses that are discouraged
+
+Dotless domain names are valid but discouraged:
+  discouraged@example (VALID)
+  _@example (VALID)
+See https://www.icann.org/en/announcements/details/new-gtld-dotless-domain-names-prohibited-30-8-2013-en
+
+Comments and folding white space SHOULD NOT be used around the "@" in the
+addr-spec:
+  valid.address(comments are allowed but)@(SHOULD NOT be used around the "@" in the addr-spec)with-comments.example (VALID)
+See https://datatracker.ietf.org/doc/html/rfc5322#section-3.4.1
