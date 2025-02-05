@@ -1,0 +1,8 @@
+Examples of valid email addresses by domain type
+
+The domain part may be a dot-atom:
+  user@example.net (VALID)
+
+The domain part may be a domain-literal:
+  IPv4-literal@[192.168.1.2] (VALID)
+  coffee@[IPv6:2001:db8::cafe] (VALID)

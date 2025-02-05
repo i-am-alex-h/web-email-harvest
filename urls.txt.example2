@@ -1,2 +1,8 @@
 https://github.com/ChrisTaylorDeveloper/web-email-harvest/blob/master/test-pages/page1.html
 https://github.com/ChrisTaylorDeveloper/web-email-harvest/blob/master/test-pages/page2.html
+https://raw.githubusercontent.com/i-am-alex-h/web-email-harvest/refs/heads/add-some-test-cases/test-pages/invalid.txt
+https://raw.githubusercontent.com/i-am-alex-h/web-email-harvest/refs/heads/add-some-test-cases/test-pages/valid-but-discouraged.txt
+https://raw.githubusercontent.com/i-am-alex-h/web-email-harvest/refs/heads/add-some-test-cases/test-pages/valid-but-undeliverable.txt
+https://raw.githubusercontent.com/i-am-alex-h/web-email-harvest/refs/heads/add-some-test-cases/test-pages/valid-domain.txt
+https://raw.githubusercontent.com/i-am-alex-h/web-email-harvest/refs/heads/add-some-test-cases/test-pages/valid-dot-atom.txt
+https://raw.githubusercontent.com/i-am-alex-h/web-email-harvest/refs/heads/add-some-test-cases/test-pages/valid-quoted-string.txt

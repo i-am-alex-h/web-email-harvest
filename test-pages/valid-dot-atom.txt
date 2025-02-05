@@ -1,0 +1,38 @@
+Examples of valid email addresses where the local-part is dot-atom
+
+https://datatracker.ietf.org/doc/html/rfc5234#appendix-B.1
+ALPHA          =  %x41-5A / %x61-7A   ; A-Z / a-z
+DIGIT          =  %x30-39             ; 0-9
+
+https://datatracker.ietf.org/doc/html/rfc5322#section-3.2.3
+atext          =   ALPHA / DIGIT /    ; Printable US-ASCII
+                   "!" / "#" /        ;  characters not including
+                   "$" / "%" /        ;  specials.  Used for atoms.
+                   "&" / "'" /
+                   "*" / "+" /
+                   "-" / "/" /
+                   "=" / "?" /
+                   "^" / "_" /
+                   "`" / "{" /
+                   "|" / "}" /
+                   "~"
+
+atom           =   [CFWS] 1*atext [CFWS]
+
+dot-atom-text  =   1*atext *("." 1*atext)
+
+dot-atom       =   [CFWS] dot-atom-text [CFWS]
+
+Characters available in a single atom:
+  ABCDEFGHIJKLMNOPQRSTUVWXYZ@uppercase.example (VALID)
+  abcdefghijklmnopqrstuvwxyz@lowercase.example (VALID)
+  0123456789@digits.example (VALID)
+  !#$%&'*+-/=?^_`{|}~@permitted.symbols.example (VALID)
+  9+three=OneDozen@mixed.example (VALID)
+
+Examples of dot-atom:
+  ZYXWVUTSRQPONMLKJIHGFEDCBA.ABCDEFGHIJKLMNOPQRSTUVWXYZ@example.com (VALID)
+  zyxwvutsrqponmlkjihgfedcba.abcdefghijklmnopqrstuvwxyz@example.org (VALID)
+  ~}|{`_^?=/-+*'&%$#!9876543210.0123456789!#$%&'*+-/=?^_`{|}~@example.net (VALID)
+  UPPER.&.lower.+.123!@dot-atom.example (VALID)
+  ?@1.example (VALID)

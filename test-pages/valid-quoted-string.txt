@@ -1,0 +1,8 @@
+Examples of valid email addresses where the local-part is quoted-string
+
+Examples of quoted-string:
+  "Spaces are allowed in quoted-string."@example.com (VALID)
+  "Commas, colons and at-signs are OK: @"@example.org (VALID)
+  " "@single.space.example (VALID)
+  "\""@single.quote.example (VALID)
+  "The backslash character, \"\\\", must be quoted"@complicated.example (VALID)

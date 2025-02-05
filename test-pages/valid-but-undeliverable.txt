@@ -1,0 +1,6 @@
+Examples of valid email addresses that are undeliverable
+
+Email addresses using the top-level pseudo-domain "invalid." are valid
+but it is not possible to deliver email to such an address:
+  valid_but_useless@undeliverable.invalid (VALID)
+See https://www.rfc-editor.org/rfc/rfc6761.html#section-6.4
