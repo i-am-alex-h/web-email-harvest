@@ -1,0 +1,34 @@
+Examples from Wikipedia
+
+From https://en.wikipedia.org/wiki/Email_address#Valid_email_addresses
+==== Valid email addresses ====
+* <code>simple@example.com</code> (VALID)
+* <code>very.common@example.com</code> (VALID)
+* <code>FirstName.LastName@EasierReading.example.org</code> (case is always ignored after the @ and usually before) (VALID)
+* <code>x@example.com</code> (one-letter local-part) (VALID)
+* <code>long.email-address-with-hyphens@and.subdomains.example.com</code> (VALID)
+* <code>user.name+tag+sorting@example.com</code> (may be routed to `user.name` at `example.com` inbox depending on mail server) (VALID)
+* <code>name/surname@example.com</code> (slashes are a printable character, and allowed) (VALID)
+* <code>admin@example</code> (local domain name with no [[Top-level domain|TLD]], although ICANN highly discourages dotless email addresses<ref>{{cite web |title=New gTLD Dotless Domain Names Prohibited |url=https://www.icann.org/news/announcement-2013-08-30-en |website=www.icann.org |publisher=ICANN |access-date=23 March 2020 |ref=gtld-dotless-prohibited |language=en}}</ref>) (VALID)
+* <code>example@s.example</code> (see the [[List of Internet top-level domains]]) (VALID)
+* <code>" "@example.org</code> (space between the quotes) <!-- RFC 5321 4.1.2 Local-part includes Quoted-string, qtextSMTP includes space; RFC 5322 3.4.1. Addr-Spec includes quoted-string, quoted-string includes FWS --> (VALID)
+* <code>"john..doe"@example.org</code> (quoted double dot) (VALID)
+* <code>mailhost!username@example.org</code> (bangified host route used for uucp mailers) (VALID)
+* <code>"very.(),:;<>[]\".VERY.\"very@\\ \"very\".unusual"@strange.example.com</code> (include non-letters character AND multiple [[at sign]], the first one being double quoted) (VALID)
+* <code>user%example.com@example.org</code> (% escaped mail route to `user` at `example.com` via example.org) (VALID)
+* <code>user-@example.org</code> (local-part ending with non-alphanumeric character from the list of allowed printable characters) (VALID)
+* <code>postmaster@[10.123.123.123]</code> (IP addresses are allowed instead of domains when in square brackets, but strongly discouraged) (VALID)
+* <code>postmaster@[IPv6:2001:0db8:85a3:0000:0000:8a2e:0370:7334]</code> (IPv6 uses a different syntax) (VALID)
+* <code>_test@[IPv6:2001:0db8:85a3:0000:0000:8a2e:0370:7334]</code> (begin with underscore different syntax) (VALID)
+
+
+From https://en.wikipedia.org/wiki/Email_address#Invalid_email_addresses
+==== Invalid email addresses ====
+* <code>abc.example.com</code> (no @ character) (INVALID)
+* <code>a@b@c@example.com</code> (only one @ is allowed outside quotation marks) (INVALID)
+* <code>a"b(c)d,e:f;g<h>i[j\k]l@example.com</code> (none of the special characters in this local-part are allowed outside quotation marks) (INVALID)
+* <code>just"not"right@example.com</code> (quoted strings must be dot separated or be the only element making up the local-part) (INVALID)
+* <code>this is"not\allowed@example.com</code> (spaces, quotes, and backslashes may only exist when within quoted strings and preceded by a backslash) (INVALID)
+* <code>this\ still\"not\\allowed@example.com</code> (even if escaped (preceded by a backslash), spaces, quotes, and backslashes must still be contained by quotes) (INVALID)
+* <code>1234567890123456789012345678901234567890123456789012345678901234+x@example.com</code> (local-part is longer than 64 characters) (INVALID)
+* <code>i.like.underscores@but_they_are_not_allowed_in_this_part</code> (underscore is not allowed in domain part) (INVALID)

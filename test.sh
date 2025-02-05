@@ -7,6 +7,8 @@ set -Eeu
 extract_test_email_addresses() {
     local -r type=$1
     grep --recursive --no-filename --fixed-strings "(${type})" test-pages \
+        | sed --regexp-extended \
+            -e 's~^\* <code>(.*)</code>.* (\('"${type}"'\))$~\1 \2~' \
         | sed -e 's/^  //' -e 's/ ('"${type}"')$//' \
         | sort
 }
