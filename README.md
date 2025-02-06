@@ -15,3 +15,10 @@ Place urls to scan in a file called `urls.txt` then run `./scrape-from-page.sh`.
 
 1. Copy `urls.text.example2` to `urls.txt`.
 2. Run `./test.sh`.
+
+## Valid but potentially unsafe email addresses
+
+1. Copy `urls.text.example3` to `urls.txt`.
+2. Run `./scrape-from-page.sh`.
+3. The bell should sound since one email address contains a BEL character.
+4. The text `WARNING!` should flash since another email address contains ANSI escape sequences.
