@@ -10,3 +10,8 @@ Email address regext pattern taken from here:
 ## Usage
 
 Place urls to scan in a file called `urls.txt` then run `./scrape-from-page.sh`. Email addresses are output to terminal.
+
+## Testing
+
+1. Copy `urls.text.example2` to `urls.txt`.
+2. Run `./test.sh`.
