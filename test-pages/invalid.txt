@@ -3,6 +3,12 @@ Examples of invalid email addresses
 dot-atom does not permit a leading dot:
   .leadingDot@not.permitted.example (INVALID)
 
+dot-atom does not permit a trailing dot:
+  trailingDot.@not.permitted.example (INVALID)
+
+dot-atom does not permit a double dot:
+  double..dot@not.permitted.example (INVALID)
+
 dot-atom does not allow commas:
   no,commas@not.allowed.example (INVALID)
 
