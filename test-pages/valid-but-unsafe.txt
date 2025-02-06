@@ -1,0 +1,13 @@
+Examples of valid email addresses that are potentially unsafe
+
+Angle brackets are permitted in quoted strings.
+This allows HTML tags to be included:
+  "<script>alert('Gotcha!');</script>"@script.example.net (VALID)
+
+Control codes are permitted.
+The next example has a BEL character between the two "ding"s:
+  ring-the-bell@[non-standard-tag:dingding] (VALID)
+Note: the non-standard-tag is permitted by RFC 5322 but not allowed by RFC 5321.
+
+ANSI escape sequences can be included:
+  "[31;1;5mWARNING![m"@escape-sequences.example.net (VALID)
