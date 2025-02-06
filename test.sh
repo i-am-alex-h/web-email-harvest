@@ -17,6 +17,15 @@ grep_allow_no_match() {
         }
 }
 
+lint_this_script() {
+    local -r script=$0
+    echo "Linting ${script}"
+    docker run --rm -i koalaman/shellcheck:v0.9.0 \
+        -o quote-safe-variables -o require-variable-braces - <"${script}"
+    docker run --rm -i mvdan/shfmt:v3.10.0 -i=4 -ci -bn --diff <"${script}"
+    echo "Linted OK."
+}
+
 extract_test_email_addresses() {
     local -r type=$1
     grep_allow_no_match --recursive --no-filename --fixed-strings "(${type})" \
@@ -82,6 +91,7 @@ run_test() {
 }
 
 main() {
+    lint_this_script
     check_set_up
     run_test
 }
