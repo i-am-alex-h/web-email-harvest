@@ -1,0 +1,12 @@
+Examples of ??? email addresses
+
+The underscore character is permitted in domain in RFC 5322
+since domain can be dot-atom but prohibited by RFC 5321:
+  smtp@one.two_three.example.org (INVALID)
+See https://www.rfc-editor.org/rfc/rfc5321#section-4.1.2
+
+Double zero in domain-literal is permitted by RFC 5322.
+RFC 5321 is unclear whether leading zeroes are allowed
+in IPv4 addresses:
+  James.Bond@[192.168.00.7] (INVALID)
+See https://www.rfc-editor.org/rfc/rfc5321#section-4.1.2
