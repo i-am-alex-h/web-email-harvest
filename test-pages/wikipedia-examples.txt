@@ -32,3 +32,5 @@ From https://en.wikipedia.org/wiki/Email_address#Invalid_email_addresses
 * <code>this\ still\"not\\allowed@example.com</code> (even if escaped (preceded by a backslash), spaces, quotes, and backslashes must still be contained by quotes) (INVALID)
 * <code>1234567890123456789012345678901234567890123456789012345678901234+x@example.com</code> (local-part is longer than 64 characters) (INVALID)
 * <code>i.like.underscores@but_they_are_not_allowed_in_this_part</code> (underscore is not allowed in domain part) (INVALID)
+
+TODO: RFC 3696 defines the length limit on the local part of an email address, see https://www.rfc-editor.org/errata/eid1690 .

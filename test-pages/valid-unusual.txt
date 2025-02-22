@@ -1,0 +1,9 @@
+/wp-content/uploads/2021/12/logo@2x-640x480.jpg (VALID)
+It appears that domain names are permitted to start with a digit:
+In the 'Discussion' block of section 2.1 of RFC 1123 there is a note that:
+    ... a segment of a host domain name is now allowed to begin with a digit
+    and could legally be entirely numeric ... However, a valid host name can
+    never have the dotted-decimal form #.#.#.#, since at least the
+    highest-level component label will be alphabetic.
+The restriction that "the highest-level component label will be alphabetic"
+is no longer true (see https://www.rfc-editor.org/errata/eid1353).
